@@ -17,6 +17,7 @@
 						echo "<table><tr><th>Post ID</th><th>Content</th><th>Author</th><th>Delete?</th></tr>";
 						while($row = $result->fetch_assoc()) {
 							echo "<tr><td>" . $row["post_id"] . "</td><td>" . $row["content"] . "</td><td>" . $row["author_id"] . "</td><td><input type=\"checkbox\" name=\"checkbox" . $checkBox . "\" value=\"" . $row["post_id"] . "\"></td></tr>";
+							$checkBox++;
 						}
 						echo "</table>";
 					}

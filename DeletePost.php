@@ -10,7 +10,7 @@ if ($mysqli->connect_errno) {
 else {
 	foreach($_POST as $postID) {
 		if($mysqli->query("DELETE FROM Posts WHERE post_id='$postID'")) {
-			echo "Deleted post with ID " . $postID;
+			echo "Deleted post with ID " . $postID . "<br>";
 		}
 		else {
 			echo "Delete query failed";
